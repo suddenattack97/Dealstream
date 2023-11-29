@@ -15,7 +15,7 @@ async function fetchItems(url) {
             const originalPrice = $(element).find('.price del').text().trim();
             const salePrice = $(element).find('.price strong').text().trim();
             const imageUrl = $(element).find('img.thumb').attr('src');
-            const goodsCode = $(element).find('.inner a').attr('data-montelena-goodscode');
+            const goodsCode = $(element).find('.inner a').attr('href');
 
             // 상품 정보를 객체에 추가합니다.
             items.push({ title, salePercentage, originalPrice, salePrice, imageUrl, goodsCode });
